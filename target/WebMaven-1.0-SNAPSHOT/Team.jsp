@@ -48,7 +48,7 @@
                         
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3 col-lg-offset-1 navbar-right" style="margin-right:0px;">
                             <ol class="breadcrumb" style="background-color:white">
-                                <li><button class=" btn btn-success navbar-btn ptext" onclick="exit()">Ø®Ø±ÙØ¬</button></li>
+                                <li><button class=" btn btn-success navbar-btn ptext" onclick="exit()">خروج</button></li>
 
                             </ol>
                         </div>                        
