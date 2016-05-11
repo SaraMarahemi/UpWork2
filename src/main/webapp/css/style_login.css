@@ -1,0 +1,139 @@
+.ptext
+{
+	font-family: nasim ;
+	font-size: 15px;
+	vertical-align: middle;
+	color: #37a000;
+	background-color: white;
+	display: inline-block;
+	direction: rtl;
+	position: center;
+}
+
+.contentbody
+{
+	background-color: #f9f9f9;
+}
+
+.headerbody
+{
+	background-color: white;
+}
+
+.borderheader
+{
+	border-bottom:  3px solid red;
+}
+
+.carousel
+{
+	border-bottom : 3px solid blue;
+}
+
+@font-face {
+    font-family: nasim;
+    src: url(393b712c01cdf4eb7f15d9180567345060f101241011931.ttf);
+}
+
+.headertext
+{
+	font-family: nasim;
+	font-size: 20px;
+	text-align: right;
+}
+
+.page-title
+{
+	font-family: nasim;
+	font-size: 30px;
+	text-align: center;
+}
+
+.inputstyle
+{
+	direction: rtl;
+	text-align: right;
+	font-family: nasim;
+	margin-bottom: 40px;
+}
+
+.inputstyle2
+{
+	direction: rtl;
+	text-align: right;
+	font-family: nasim;
+	margin-bottom: 20px;
+}
+
+.label-style
+{
+	direction: rtl;
+	text-align: right;
+	font-family: nasim;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+.submitstyle
+{
+	text-align: center;
+	font-family: nasim;
+	font-size: 20px;
+}
+
+.top-margin
+{
+	margin-top: 10px;
+}
+
+.inputstyle3
+{
+	direction: rtl;
+	text-align: right;
+	font-family: nasim;
+	margin-bottom: 20px;
+
+	margin-top: 20px;
+}
+
+.infotext
+{
+	margin-top: 20px;
+	margin-bottom: 20;
+	font-style: nasim;
+	font-size: 15px;
+	display: inline-block;
+	direction: rtl;
+	text-align: right;
+
+
+}
+
+.Right
+{
+	direction: rtl;
+	text-align: right;
+	font-family: nasim;
+}
+
+.carousel-picture
+{
+	height:40%;
+}
+
+.sitemap
+{
+	list-style-type: none;
+}
+
+.footer-body-link
+{
+	list-style-type: none;
+	font-size: 18px;
+}
+
+.footer-body-heading
+{
+	font-size: 22px;
+	font-weight: bold;
+}

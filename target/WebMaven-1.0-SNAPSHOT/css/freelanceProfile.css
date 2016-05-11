@@ -1,0 +1,50 @@
+.contact_box
+{
+	/*position : absolute;*/
+	background-color :  #555c70;  
+	/*width: 160px;*/
+	color:#afb2bb;
+	padding-top:5px;
+	padding-left:15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	height: 100%;
+	padding-bottom: 10px;
+	
+}
+.contact_box p
+{
+    font-size: 30px;
+}
+.contact_box button
+{
+	padding-right: 10px;
+	padding: 6px 6px;
+}
+.tab-content-info{
+	/*width: 62%;
+    margin-left: 160px;*/
+    background-color: #7ac366;
+}
+.name_box{
+padding-left: 0px;
+}
+.biog_text_color
+{
+	color:white;
+}
+#a_link{
+	font-size: 20px;
+}
+.row{
+	margin-right: 0px;
+}
+/*.showme{ 
+display: none;
+}
+.showhim:hover .showme{
+display : block;
+}
+.showhim:hover .ok{
+display : none;
+}*/

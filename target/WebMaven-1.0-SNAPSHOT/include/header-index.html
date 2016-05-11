@@ -1,0 +1,388 @@
+<div class="header">
+
+    <div class="row borderheader headerbody">
+    
+        <div class=" top-margin">
+            
+            <div class="col-xs-4 col-sm-2 col-md-1 col-md-offset-1 navbar-left">
+                <img src="images/LOGO.jpg">
+            </div> 
+            
+            <div class="col-xs-offset-1 col-xs-3 col-sm-5 col-md-5  navbar-brand">
+                <form> 
+                    <div class="form-group"> 
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default"><span class="glyphicon-search glyphicon"></span></button>
+                            </span>
+                            <input type="text" class="form-control ptext" placeholder="جستجو">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-3 col-lg-offset-1 navbar-right" style="margin-right:0px;">
+                <ol class="breadcrumb" style="background-color:white">
+                    <li><button class=" btn btn-success navbar-btn ptext" data-toggle="modal" data-target="#signIn">ورود</button></li>
+                    <li><button class=" btn btn-danger navbar-btn ptext" data-toggle="modal" data-target="#signUp">عضویت</button></li>
+                    <li><a class=" btn btn-info navbar-btn ptext" href="index.jsp">صفحه اصلی</a></li>
+                </ol>
+            </div>
+
+            <div class="modal" id="signUp" tabindex="-1" role="dialog1">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p class="page-title">
+                                    ثبت نام کاربر جدید<br/>
+                                    </p>
+                                    <p class="headertext">
+                                     جهت شروع مدل کاربری خود را مشخص کنید</p>
+                                     <legend></legend>
+
+                                    <div class="col-xs-3" style="text-align:center;">
+                                        <img style="margin:auto;display:block; width: 60px; height: 75px;" src="images/boss.jpg" alt="">
+                                        <button class="btn btn-primary submitstyle" data-toggle="modal" data-target="#signUpFreelancer">کارجو</button>
+                                    </div>
+
+                                    <div class="col-xs-1" style="text-align:center;">
+                                        <div class="Or_divider">
+                                            
+                                        </div>
+                                        <p class="Or_P">OR</p>
+                                        <div class="Or_divider">
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-4" style="text-align:center;">
+                                        <img style="margin:auto;display:block; width: 60px; height: 75px;" src="images/emp.jpg" alt="">
+                                        <button class="btn btn-primary submitstyle" data-toggle="modal" data-target="#signUpClient">کارفرما</button>
+                                    </div>
+
+                                    <div class="col-xs-1" style="text-align:center;">
+                                        <div class="Or_divider">
+                                            
+                                        </div>
+                                        <p class="Or_P">OR</p>
+                                        <div class="Or_divider">
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-3" style="text-align:center;">
+                                        <img style="margin:auto;display:block; width: 60px; height: 75px;" src="images/Team.png" alt="">
+                                        <button class="btn btn-primary text-capitalize submitstyle" data-toggle="modal" data-target="#signUpTeam">تیم</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="modal" id="signUpClient" tabindex="-2" role="dialog1">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p class="page-title">
+                            ثبت نام کارمندان<br/>
+                            </p>
+                            <p class="headertext">
+                            اطلاعات کاربری</p>
+                            
+                            <form class="form-horizontal" role="form">
+                                <legend></legend>
+                            
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputName" placeholder="نام">
+                                    </div>
+                                     <label class="label-style control-label" for="inputName">نام:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputFamilyName" placeholder="نام خانوادگی">
+                                    </div>
+                                     <label class="label-style control-label" for="inputFamilyName">نام خانوادگی:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputEmail" placeholder="ایمیل">
+                                    </div>
+                                     <label class="label-style control-label" for="inputEmail">ایمیل:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputUsername" placeholder="نام کاربری">
+                                    </div>
+                                     <label class="label-style control-label" for="inputUsername">نام کاربری:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="password" class="form-control inputstyle2" id="inputPassword" placeholder="گذر واژه">
+                                    </div>
+                                     <label class="label-style control-label" for="inputPassword">گذر واژه:</label>
+                                </div>
+                                
+                                <p class="headertext">
+                                اطلاعات کاری</p>
+                                <legend> </legend>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputPassword" placeholder="تخصص">
+                                    </div>
+                                     <label class="label-style control-label" for="inputExpertise">تخصص:</label>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputPassword" placeholder="سوابق کاری">
+                                    </div>
+                                     <label class="label-style control-label" for="inputExperience">سوابق کاری:</label>
+                                </div>
+                                
+                                <button type="button" class="btn btn-primary submitstyle" onclick="getinEmployer()">ثبت نام</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="modal" id="signUpTeam" tabindex="-2" role="dialog1">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p class="page-title">
+                            ثبت نام تیم<br/>
+                            </p>
+                            <p class="headertext">
+                            اطلاعات کاربری</p>
+                            
+                            <form class="form-horizontal" role="form">
+                                <legend></legend>
+                            
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputName" placeholder="نام">
+                                    </div>
+                                     <label class="label-style control-label" for="inputName">نام:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputFamilyName" placeholder="نام خانوادگی">
+                                    </div>
+                                     <label class="label-style control-label" for="inputFamilyName">نام خانوادگی:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputEmail" placeholder="ایمیل">
+                                    </div>
+                                     <label class="label-style control-label" for="inputEmail">ایمیل:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputUsername" placeholder="نام کاربری">
+                                    </div>
+                                     <label class="label-style control-label" for="inputUsername">نام کاربری:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="password" class="form-control inputstyle2" id="inputPassword" placeholder="گذر واژه">
+                                    </div>
+                                     <label class="label-style control-label" for="inputPassword">گذر واژه:</label>
+                                </div>
+                                
+                                <p class="headertext">
+                                اطلاعات کاری</p>
+                                <legend> </legend>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputPassword" placeholder="تخصص">
+                                    </div>
+                                     <label class="label-style control-label" for="inputExpertise">تخصص:</label>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputPassword" placeholder="سوابق کاری">
+                                    </div>
+                                     <label class="label-style control-label" for="inputExperience">سوابق کاری:</label>
+                                </div>
+                                
+                                <button type="button" class="btn btn-primary submitstyle" onclick="getinTeam()" >ثبت نام</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="signUpFreelancer" tabindex="-2" role="dialog1">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p class="page-title">
+                            ثبت نام کارفرما<br/>
+                            </p>
+                            <p class="headertext">
+                            اطلاعات کاربری</p>
+                            
+                            <form class="form-horizontal" role="form">
+                                <legend></legend>
+                            
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputName" placeholder="نام">
+                                    </div>
+                                     <label class="label-style control-label" for="inputName">نام:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputFamilyName" placeholder="نام خانوادگی">
+                                    </div>
+                                     <label class="label-style control-label" for="inputFamilyName">نام خانوادگی:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputEmail" placeholder="ایمیل">
+                                    </div>
+                                     <label class="label-style control-label" for="inputEmail">ایمیل:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputUsername" placeholder="نام کاربری">
+                                    </div>
+                                     <label class="label-style control-label" for="inputUsername">نام کاربری:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="password" class="form-control inputstyle2" id="inputPassword" placeholder="گذر واژه">
+                                    </div>
+                                     <label class="label-style control-label" for="inputPassword">گذر واژه:</label>
+                                </div>
+                                
+                                <p class="headertext">
+                                اطلاعات کاری</p>
+                                <legend> </legend>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputPassword" placeholder="تخصص">
+                                    </div>
+                                     <label class="label-style control-label" for="inputExpertise">تخصص:</label>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputPassword" placeholder="سوابق کاری">
+                                    </div>
+                                     <label class="label-style control-label" for="inputExperience">سوابق کاری:</label>
+                                </div>
+                                
+                                <button type="button" class="btn btn-primary submitstyle" onclick="getinFreelancer()">ثبت نام</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="modal" id="signIn" tabindex="-1" role="dialog1">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p class="page-title">
+                            ورود کاربران<br/>
+                            </p>
+                            <p class="headertext">
+                            اطلاعات کاربری</p>
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputUsername" placeholder="نام کاربری">
+                                    </div>
+                                     <label class="label-style control-label" for="inputUsername">نام کاربری:</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="password" class="form-control inputstyle2" id="inputPassword" placeholder="گذر واژه">
+                                    </div>
+                                     <label class="label-style control-label" for="inputPassword">گذر واژه:</label>
+                                </div>
+                                <button class="btn btn-warning text-capitalize submitstyle" data-toggle="modal" data-target="#forgotPass">بازیابی رمز</button>
+                                <button type="button" class="btn btn-primary submitstyle">ورود</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="forgotPass" tabindex="-2" role="dialog1">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p class="page-title">
+                            بازیابی رمز ورود<br/>
+                            </p>
+                            <p class="headertext">
+                            :آدرس ایمیل خود را جهت بازیابی رمز خود وارد کنید</p>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-9 col-sm-10">
+                                        <input type="text" class="form-control inputstyle2" id="inputUsername" placeholder="ایمیل">
+                                    </div>
+                                     <label class="label-style control-label" for="inputUsername">ایمیل:</label>
+                                </div>
+                                
+                                <button type="button" class="btn btn-warning submitstyle">بازیابی</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function getinTeam() 
+    {
+        window.location = "Team.html"
+    }
+</script>
+
+<script type="text/javascript">
+    function getinEmployer() 
+    {
+        window.location = "Employer.html"
+    }
+</script>
+
+<script type="text/javascript">
+    function getinFreelancer() 
+    {
+        window.location = "Freelance.html"
+    }
+</script>

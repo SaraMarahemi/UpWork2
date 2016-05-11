@@ -1,0 +1,100 @@
+.infotext
+{
+	font-family: nasim;
+	font-size: 30px;
+	color:#7d7d7d;
+	text-align: center;
+
+}
+
+@font-face {
+    font-family: nasim;
+    src: url(393b712c01cdf4eb7f15d9180567345060f101241011931.ttf);
+}
+
+
+.anchor_button
+{
+	background-color: #37a000;
+	width: 20%;
+	text-align: center;
+	color:white;
+}
+
+.anchor_button:hover
+{
+	background-color: #008329;
+
+}
+
+.headertext2
+{
+	font-family: nasim;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 70px;
+	margin-bottom: 70px;
+	padding-top: 20px;
+
+}
+
+
+.Or_divider
+{
+	margin:auto;
+	width:1px;
+	height: 70px;
+	border: 1px solid #7d7d7d;
+}
+
+.Or_P
+{
+	padding-top: 10px ;
+	padding-bottom: 10px ;
+	color: #7d7d7d ;
+	margin-bottom: 0px;
+
+}
+
+.padderleft
+{
+	padding-left: 80px;
+}
+
+.padderright
+{
+	padding-right: 80px;
+}
+
+.navbar-brand
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+}
+
+
+.alltext
+{
+	font-family: nasim;
+}
+
+.boxmodel
+{
+	margin: 20px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+
+}
+
+
+html , body
+{
+	margin:0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: nasim;
+}
