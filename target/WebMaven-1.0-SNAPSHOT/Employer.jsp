@@ -1,7 +1,11 @@
+<%-- 
+    Document   : Employer
+    Created on : May 19, 2016, 7:57:49 PM
+    Author     : Sarah
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
 
@@ -41,7 +45,7 @@
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-default"><span class="glyphicon-search glyphicon"></span></button>
                                         </span>
-                                        <input type="text" class="form-control ptext" placeholder="Ø¬Ø³ØªØ¬Ù">
+                                        <input type="text" class="form-control ptext" placeholder="جستجو">
                                     </div>
                                 </div>
                             </form>
@@ -49,8 +53,8 @@
                         
                         <div class="col-xs-2 col-lg-2 col-lg-offset-1 navbar-right" style="margin-right:0px;">
                             <ol class="breadcrumb" style="background-color:white">
-                                <li><button class=" btn btn-success navbar-btn ptext" onclick="exit()">Ø®Ø±ÙØ¬</button></li>
-                                 <li><a class=" btn btn-info navbar-btn ptext" onclick="showProfile()" >Ù¾Ø±ÙÙØ§ÛÙ</a></li>
+                                <li><button class=" btn btn-success navbar-btn ptext" onclick="exit()">خروج</button></li>
+                                 <li><a class=" btn btn-info navbar-btn ptext" onclick="showProfile()" >پروفایل</a></li>
                             </ol>
                         </div>
 
@@ -62,7 +66,75 @@
                 </div>
             </div>
 
-
+            <script>
+                function StoreCompanyInfo(){
+                $.ajax({
+                    type: "POST",
+                    url: "EmployerCompanyInfo",
+                    dataType: 'json',
+                    data: {CompanyName: document.getElementById("CompanyName").value ,
+                           CompanyURL: document.getElementById("CompanyURL").value,
+                           CompanyAddress: document.getElementById("CompanyAddress").value
+                          },
+                    success: function (data, textStatus, jqXHR)  
+                    {
+                        //alert("has reached"+data.returnValue);
+                        document.getElementById("CompanyName").value = data.returnValue;
+                    }
+                });
+            }
+                function SendJobOffer(){
+                   $.ajax({
+                    type: "POST",
+                    url: "EmployerJobOfferHandler",
+                    dataType: 'json',
+                    data: {JobName: document.getElementById("JobName").value ,
+                           JobSalary: document.getElementById("JobSalary").value,
+                           JobType: document.getElementById("JobType").value,
+                           JobExperiment: document.getElementById("JobExperiment").value,
+                           JobSkills: document.getElementById("JobSkills").value
+                          },
+                    success: function (data, textStatus, jqXHR)  
+                    {
+                        //alert("has reached"+data.returnValue);
+                        document.getElementById("JobName").value = data.returnValue;
+                    }
+                }); 
+                }
+                function SearchForEmployee(){
+                    $.ajax({
+                    type: "POST",
+                    url: "EmployerSearchHandler",
+                    dataType: 'json',
+                    data: {SpecialSkill: document.getElementById("SpecialSkill").value ,
+                           JobField: document.getElementById("JobField").value,
+                           JobInterest: document.getElementById("JobInterest").value,
+                           ResumeDate: document.getElementById("ResumeDate").value
+                          },
+                    success: function (data, textStatus, jqXHR)  
+                    {
+                        //alert("has reached"+data.returnValue);
+                        document.getElementById("JobField").value = data.returnValue;
+                    }
+                }); 
+                }
+                function RequestForOutSourcing(){
+                    $.ajax({
+                    type: "POST",
+                    url: "EmployerOutSourceHandler",
+                    dataType: 'json',
+                    data: {ProjectName: document.getElementById("ProjectName").value ,
+                           ProjectTime: document.getElementById("ProjectTime").value,
+                           ProjectBenefit: document.getElementById("ProjectBenefit").value
+                          },
+                    success: function (data, textStatus, jqXHR)  
+                    {
+                        //alert("has reached"+data.returnValue);
+                        document.getElementById("ProjectName").value = data.returnValue;
+                    }
+                }); 
+                }
+            </script>
             <div class="row" style="margin-top:55px;">
                 
                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -75,19 +147,19 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active alltext">
-                                <a id="a_link" href="#home" aria-controls="home" role="tab" data-toggle="tab">ØµÙØ­Ù Ø´Ø±Ú©Øª</a>
+                                <a id="a_link" href="#home" aria-controls="home" role="tab" data-toggle="tab">صفحه شرکت</a>
                             </li>
                             <li role="presentation" class="alltext">
-                                <a id="a_link" href="#tab" aria-controls="tab" role="tab" data-toggle="tab">Ø§Ú¯ÙÛ Ø§Ø³ØªØ®Ø¯Ø§Ù</a>
+                                <a id="a_link" href="#tab" aria-controls="tab" role="tab" data-toggle="tab">اگهی استخدام</a>
                             </li>
                             <li role="presentation" class="alltext">
-                                <a id="a_link" href="#search" aria-controls="tab" role="tab" data-toggle="tab">Ø¬Ø³ØªØ¬Ù</a>
+                                <a id="a_link" href="#search" aria-controls="tab" role="tab" data-toggle="tab">جستجو</a>
                             </li>
                             <li role="presentation" class="alltext">
-                                <a id="a_link" href="#privacy" aria-controls="tab" role="tab" data-toggle="tab">Ø¨Ø±ÙÙ Ø³Ù¾Ø§Ø±Û</a>
+                                <a id="a_link" href="#privacy" aria-controls="tab" role="tab" data-toggle="tab">برون سپاری</a>
                             </li>
                             <li role="presentation" class="alltext">
-                                <a id="a_link" href="#profile" aria-controls="tab" role="tab" data-toggle="tab">Ù¾Ø±ÙÙØ§ÛÙ</a>
+                                <a id="a_link" href="#profile" aria-controls="tab" role="tab" data-toggle="tab">پروفایل</a>
                             </li>
                             
                         </ul>
@@ -98,24 +170,13 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 alltext" style="text-align:center;">
                                         <form action="" method="POST" role="form">
-                                            
-                                        
                                             <div class="form-group">
-                                                
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙØ§Ù Ø´Ø±Ú©Øª">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙØ¨Ú¯Ø§Ù Ø´Ø±Ú©Øª">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø§Ø¯Ø±Ø³ Ø´Ø±Ú©Øª">
-                                                
+                                                <input type="text" class="form-control inputstyle3" id="CompanyName" placeholder="نام شرکت">
+                                                <input type="text" class="form-control inputstyle3" id="CompanyURL" placeholder="وبگاه شرکت">
+                                                <input type="text" class="form-control inputstyle3" id="CompanyAddress" placeholder="ادرس شرکت">   
                                             </div>
-
-
-                                        
-                                            
-                                        
-                                            <button type="submit" class="btn btn-primary">Ø°Ø®ÛØ±Ù</button>
-                                        </form>
-
-                                        
+                                            <button type="button" class="btn btn-primary" onclick="StoreCompanyInfo()">ذخیره</button>
+                                        </form>   
                                     </div>
                                 </div>
                                 <div class="row">
@@ -135,16 +196,16 @@
                                         
                                             <div class="form-group">
                                                 
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø¹ÙÙØ§Ù Ø´ØºÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙÛØ²Ø§Ù Ø¯Ø±Ø§ÙØ¯">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙÙØ¹ Ø´ØºÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ØªÙØ¶ÛØ­Ø§Øª">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙÙØ§Ø±Øª ÙÙØ±Ø¯ ÙÛØ§Ø²">
+                                                <input type="text" class="form-control inputstyle3" id="JobName" placeholder="عنوان شغل">
+                                                <input type="text" class="form-control inputstyle3" id="JobSalary" placeholder="میزان درامد">
+                                                <input type="text" class="form-control inputstyle3" id="JobType" placeholder="نوع شغل">
+                                                <input type="text" class="form-control inputstyle3" id="JobExperiment" placeholder="توضیحات">
+                                                <input type="text" class="form-control inputstyle3" id="JobSkills" placeholder="مهارت مورد نیاز">
                                             </div>
                                         
                                             
                                         
-                                            <button type="submit" class="btn btn-primary">Ø§Ø±Ø³Ø§Ù</button>
+                                            <button type="button" class="btn btn-primary" onclick="SendJobOffer()">ارسال</button>
                                         </form>
 
                                     </div>
@@ -163,15 +224,15 @@
                                         
                                             <div class="form-group">
                                                 
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ØªØ®ØµØµ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙÙØ¹ Ø´ØºÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø³ÙØ¨ÙÙ Û Ú©Ø§Ø± ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø²ÙØ§Ù Ø§Ø±Ø³Ø§Ù Ø±Ø²ÙÙÙ">
+                                                <input type="text" class="form-control inputstyle3" id="SpecialSkill" placeholder="تخصص">
+                                                <input type="text" class="form-control inputstyle3" id="JobField" placeholder="نوع شغل">
+                                                <input type="text" class="form-control inputstyle3" id="JobInterest" placeholder="سلبقه ی کار ">
+                                                <input type="text" class="form-control inputstyle3" id="ResumeDate" placeholder="زمان ارسال رزومه">
                                             </div>
                                         
                                             
                                         
-                                            <button type="submit" class="btn btn-primary">Ø¬Ø³ØªØ¬Ù</button>
+                                            <button type="button" class="btn btn-primary" onclick="SearchForEmployee()">جستجو</button>
                                         </form>
 
                                     </div>
@@ -188,14 +249,14 @@
                                         
                                             <div class="form-group">
                                                 
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø¹ÙÙØ§Ù Ù¾Ø±ÙÚÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø²ÙØ§Ù Ù¾Ø±ÙÚÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø³ÙØ¯ Ù¾Ø±ÙÚÙ">
+                                                <input type="text" class="form-control inputstyle3" id="ProjectName" placeholder="عنوان پروژه">
+                                                <input type="text" class="form-control inputstyle3" id="ProjectTime" placeholder="زمان پروژه">
+                                                <input type="text" class="form-control inputstyle3" id="ProjectBenefit" placeholder="سود پروژه">
                                             </div>
                                         
                                             
                                         
-                                            <button type="submit" class="btn btn-primary">Ø§ÛØ¬Ø§Ø¯ Ø¯Ø±Ø®ÙØ§Ø³Øª</button>
+                                            <button type="button" class="btn btn-primary" onclick="RequestForOutSourcing()">ایجاد درخواست</button>
                                         </form>
                                         
                                     </div>
@@ -212,7 +273,7 @@
                                             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                                             </div>
                                             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                                  <button type="submit" onclick="showProfile()" class="btn btn-primary" style="margin-top: 40px;margin-bottom: 40px;width:100%;">ÙÛØ±Ø§ÛØ´ Ù¾Ø±ÙÙØ§ÛÙ</button>
+                                                  <button type="submit" onclick="showProfile()" class="btn btn-primary" style="margin-top: 40px;margin-bottom: 40px;width:100%;">ویرایش پروفایل</button>
                                             </div>
                                             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                                             </div>
@@ -238,10 +299,10 @@
 
         <script >
             function exit() {
-                window.location = "index.html"
+                window.location = "index.jsp"
             }
              function showProfile(){
-                window.location = "EmployerProfile.html"
+                window.location = "EmployerProfile.jsp"
             }
 
         </script>

@@ -9,7 +9,6 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,7 +26,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Sam
  */
 @Entity
-@Table(name = "resumes_cv", catalog = "neteng", schema = "")
+@Table(name = "resumes_cv")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "ResumesCv.findAll", query = "SELECT r FROM ResumesCv r"),
@@ -58,7 +57,7 @@ public class ResumesCv implements Serializable {
     @Column(name = "ID")
     private Integer id;
     @JoinColumn(name = "EmployeeID", referencedColumnName = "Username")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Employee employeeID;
 
     public ResumesCv() {

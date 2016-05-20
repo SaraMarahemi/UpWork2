@@ -6,11 +6,10 @@
 package Entities;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
@@ -27,7 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Sam
  */
 @Entity
-@Table(name = "employer", catalog = "neteng", schema = "")
+@Table(name = "employer")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Employer.findAll", query = "SELECT e FROM Employer e"),
@@ -37,7 +36,10 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Employer.findByUsername", query = "SELECT e FROM Employer e WHERE e.username = :username"),
     @NamedQuery(name = "Employer.findByPassword", query = "SELECT e FROM Employer e WHERE e.password = :password"),
     @NamedQuery(name = "Employer.findByField", query = "SELECT e FROM Employer e WHERE e.field = :field"),
-    @NamedQuery(name = "Employer.findByResume", query = "SELECT e FROM Employer e WHERE e.resume = :resume")})
+    @NamedQuery(name = "Employer.findByResume", query = "SELECT e FROM Employer e WHERE e.resume = :resume"),
+    @NamedQuery(name = "Employer.findByCompanyName", query = "SELECT e FROM Employer e WHERE e.companyName = :companyName"),
+    @NamedQuery(name = "Employer.findByCompanyWeb", query = "SELECT e FROM Employer e WHERE e.companyWeb = :companyWeb"),
+    @NamedQuery(name = "Employer.findByCompanyAddress", query = "SELECT e FROM Employer e WHERE e.companyAddress = :companyAddress")})
 public class Employer implements Serializable {
     private static final long serialVersionUID = 1L;
     @Basic(optional = false)
@@ -73,10 +75,21 @@ public class Employer implements Serializable {
     @Size(max = 30)
     @Column(name = "Resume")
     private String resume;
-    @ManyToMany(mappedBy = "employerCollection", fetch = FetchType.LAZY)
-    private Collection<Employee> employeeCollection;
-    @OneToMany(mappedBy = "employerID", fetch = FetchType.LAZY)
-    private Collection<Joboffer> jobofferCollection;
+    @Size(max = 30)
+    @Column(name = "CompanyName")
+    private String companyName;
+    @Size(max = 60)
+    @Column(name = "CompanyWeb")
+    private String companyWeb;
+    @Size(max = 60)
+    @Column(name = "CompanyAddress")
+    private String companyAddress;
+    @ManyToMany(mappedBy = "employerList")
+    private List<Employee> employeeList;
+    @OneToMany(mappedBy = "empolyerID")
+    private List<Outsourceproject> outsourceprojectList;
+    @OneToMany(mappedBy = "employerID")
+    private List<Joboffer> jobofferList;
 
     public Employer() {
     }
@@ -149,22 +162,55 @@ public class Employer implements Serializable {
         this.resume = resume;
     }
 
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    public String getCompanyWeb() {
+        return companyWeb;
+    }
+
+    public void setCompanyWeb(String companyWeb) {
+        this.companyWeb = companyWeb;
+    }
+
+    public String getCompanyAddress() {
+        return companyAddress;
+    }
+
+    public void setCompanyAddress(String companyAddress) {
+        this.companyAddress = companyAddress;
+    }
+
     @XmlTransient
-    public Collection<Employee> getEmployeeCollection() {
-        return employeeCollection;
+    public List<Employee> getEmployeeList() {
+        return employeeList;
     }
 
-    public void setEmployeeCollection(Collection<Employee> employeeCollection) {
-        this.employeeCollection = employeeCollection;
+    public void setEmployeeList(List<Employee> employeeList) {
+        this.employeeList = employeeList;
     }
 
     @XmlTransient
-    public Collection<Joboffer> getJobofferCollection() {
-        return jobofferCollection;
+    public List<Outsourceproject> getOutsourceprojectList() {
+        return outsourceprojectList;
     }
 
-    public void setJobofferCollection(Collection<Joboffer> jobofferCollection) {
-        this.jobofferCollection = jobofferCollection;
+    public void setOutsourceprojectList(List<Outsourceproject> outsourceprojectList) {
+        this.outsourceprojectList = outsourceprojectList;
+    }
+
+    @XmlTransient
+    public List<Joboffer> getJobofferList() {
+        return jobofferList;
+    }
+
+    public void setJobofferList(List<Joboffer> jobofferList) {
+        this.jobofferList = jobofferList;
     }
 
     @Override

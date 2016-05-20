@@ -5,8 +5,12 @@
  */
 package DBlayer;
 
+import Entities.Employee;
 import Entities.Employer;
 import Entities.Joboffer;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  *
@@ -24,5 +28,11 @@ public interface JobOfferDAO {
     
     public Employer GetEmployer ( Integer JobID) ;
     public Employer GetEmployer ( Joboffer e) ;
+    public List<Employee> GetAllEmployee ( Integer JobID) ;
+    public List<Employee> GetAllEmployee ( Joboffer e ) ;
+    public String AddEmployee ( Employee e , Joboffer jo  ) ;
+    public String AddEmployee ( Employee e ,  Integer JobID ) ;
+    
+    public List<Joboffer> Search (  Joboffer jo  ) ;
     
 }

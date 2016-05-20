@@ -5,8 +5,12 @@
  */
 package WEB_Servlet;
 
+import Entities.Employee;
+import ServiceLayer.EmployeeManager;
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,18 +33,30 @@ public class EmployeeEditInfo extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet EmployeeEditInfo</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet EmployeeEditInfo at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+          System.out.println(request.getParameter("EmployeeName"));
+            System.out.println(request.getParameter("EmployeeFamilyName"));
+            System.out.println(request.getParameter("EmployeeUserName"));
+            System.out.println(request.getParameter("EmployeePassword"));
+            System.out.println(request.getParameter("EmployeeSkill"));
+            System.out.println(request.getParameter("EmployeeResume"));
+            String EmployeeName = request.getParameter("EmployeeName");
+            String EmployeeFamilyName = request.getParameter("EmployeeFamilyName");
+            String EmployeeUserName = request.getParameter("EmployeeUserName");
+            String EmployeePassword =request.getParameter("EmployeePassword");
+            String EmployeeSkill = request.getParameter("EmployeeSkill");
+            String EmployeeResume = request.getParameter("EmployeeResume");
+
+            ServletContext sc = request.getServletContext();
+            EmployeeManager em = new EmployeeManager(sc);
+            Employee userEmployee = new Employee(EmployeeUserName,EmployeeName,EmployeeFamilyName,"Email",EmployeePassword);
+            userEmployee.setField(EmployeeSkill);
+            userEmployee.setResume(EmployeeResume);
+            String json = new Gson().toJson(new Pri());
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write(json);
+            boolean result = em.Register(userEmployee);
         }
     }
 
@@ -82,5 +98,8 @@ public class EmployeeEditInfo extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
+    public class Pri
+    {
+        String returnValue= "Hellooooo!";
+    }
 }

@@ -1,6 +1,5 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!doctype html>
 <html>
     <head>
@@ -16,7 +15,7 @@
         <link rel="stylesheet" href="css/mainclass.css">
         <link rel="stylesheet" href="css/style_login.css">
         <link href="css/bootstrap.min.css" rel="stylesheet">
-         <link rel="stylesheet" href="css/indexStyle.css">
+        <link rel="stylesheet" href="css/indexStyle.css">
 
         <script src="js/jquery-2.2.1.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -41,7 +40,7 @@
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-default"><span class="glyphicon-search glyphicon"></span></button>
                                         </span>
-                                        <input type="text" class="form-control ptext" placeholder="Ø¬Ø³ØªØ¬Ù">
+                                        <input type="text" class="form-control ptext" placeholder="جستجو">
                                     </div>
                                 </div>
                             </form>
@@ -49,8 +48,8 @@
                         
                         <div class="col-xs-2 col-lg-2 col-lg-offset-1 navbar-right" style="margin-right:0px;">
                             <ol class="breadcrumb" style="background-color:white">
-                                <li><button class=" btn btn-success navbar-btn ptext" onclick="exit()">Ø®Ø±ÙØ¬</button></li>
-                                <li><button class=" btn btn-danger navbar-btn ptext" onclick="setting()" data-toggle="modal" data-target="#signUp">ØªÙØ¸ÛÙØ§Øª</button></li>
+                                <li><button class=" btn btn-success navbar-btn ptext" onclick="exit()">خروج</button></li>
+                                <li><button class=" btn btn-danger navbar-btn ptext" onclick="setting()" data-toggle="modal" data-target="#signUp">تنظیمات</button></li>
                             </ol>
                         </div>
 
@@ -75,13 +74,13 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active alltext">
-                                <a id="a_link" href="#home" aria-controls="home" role="tab" data-toggle="tab">ØµÙØ­Ù Ø´Ø®ØµÛ Ø´Ø±Ú©Øª</a>
+                                <a id="a_link" href="#home" aria-controls="home" role="tab" data-toggle="tab">صفحه شخصی شرکت</a>
                             </li>
                             <li role="presentation" class="alltext">
-                                <a id="a_link" href="#tab" aria-controls="tab" role="tab" data-toggle="tab">ØµÙØ¯ÙÙ ÙØ±ÙØ¯Û </a>
+                                <a id="a_link" href="#tab" aria-controls="tab" role="tab" data-toggle="tab">صندوق ورودی </a>
                             </li>
                             <li role="presentation" class="alltext">
-                                <a id="a_link" href="#follow" aria-controls="follow" role="tab" data-toggle="tab">ÙØ§ Ø±Ø§ Ø¯ÙØ¨Ø§Ù Ú©ÙÛØ¯</a>
+                                <a id="a_link" href="#follow" aria-controls="follow" role="tab" data-toggle="tab">ما را دنبال کنید</a>
                             </li>
                             
                         </ul>
@@ -103,7 +102,7 @@
                                             </div>
 
                                             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                <p class="infotext "> <strong> ÙØ§Ù Ø´Ø±Ú©Øª:</strong> </p>
+                                                <p class="infotext "> <strong> نام شرکت:</strong> </p>
                                             </div>
                                         </div>
                                         
@@ -126,7 +125,7 @@
                                             </div>
 
                                             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                <p class="infotext "> <strong> ÙØ¨Ú¯Ø§Ù Ø´Ø±Ú©Øª</strong> </p>
+                                                <p class="infotext "> <strong> وبگاه شرکت</strong> </p>
                                             </div>
                                         </div>
                                         
@@ -149,7 +148,7 @@
                                             </div>
 
                                             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                                <p class="infotext "> <strong> Ø¢Ø¯Ø±Ø³ Ø´Ø±Ú©Øª:</strong> </p>
+                                                <p class="infotext "> <strong> آدرس شرکت:</strong> </p>
                                             </div>
                                         </div>
                                         
@@ -173,12 +172,12 @@
                                         
                                         <div class="panel-group" style="margin-top:20px;">
                                             <div class="panel panel-default">
-                                              <div class="panel-heading Right">Ø¯Ø±Ø®ÙØ§Ø³Øª Ø§Ø³ØªØ®Ø¯Ø§Ù</div>
+                                              <div class="panel-heading Right">درخواست استخدام</div>
                                               <div class="panel-body Right">Panel Content</div>
                                             </div>
 
                                             <div class="panel panel-primary">
-                                              <div class="panel-heading Right">Ø¯Ø±Ø®ÙØ§Ø³Øª Ø§Ø³ØªØ®Ø¯Ø§Ù</div>
+                                              <div class="panel-heading Right">درخواست استخدام</div>
                                               <div class="panel-body Right">Panel Content</div>
                                             </div>
                                         </div>
@@ -197,7 +196,7 @@
                                             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                                             </div>
                                             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                                  <button type="submit" class="btn btn-primary" style="margin-top: 40px;margin-bottom: 40px;width:100%;">ÙØ§ Ø±Ø§ Ø¯ÙØ¨Ø§Ù Ú©ÙÛØ¯</button>
+                                                  <button type="submit" class="btn btn-primary" style="margin-top: 40px;margin-bottom: 40px;width:100%;">ما را دنبال کنید</button>
                                             </div>
                                             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                                             </div>
@@ -226,16 +225,16 @@
 
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 alltext" style="text-align:center;margin-top:30px">
                     <form action="" method="POST" role="form">
-                        <legend>Ø§Ø±Ø³Ø§Ù Ø¯Ø±Ø®ÙØ§Ø³Øª Ø§Ø³ØªØ®Ø¯Ø§Ù</legend>
+                        <legend>ارسال درخواست استخدام</legend>
                     
                         <div class="form-group">
                             
-                            <input type="text" class="form-control inputstyle3" id="" placeholder="ÙØ§Ù Ú©Ø§Ø±Ø¨Ø±Û">
+                            <input type="text" class="form-control inputstyle3" id="" placeholder="نام کاربری">
                         </div>
                     
                         
                     
-                        <button type="submit" class="btn btn-primary">Ø§Ø±Ø³Ø§Ù</button>
+                        <button type="submit" class="btn btn-primary">ارسال</button>
                     </form>
                 </div>
 
@@ -250,10 +249,10 @@
 
         <script >
             function exit() {
-                window.location = "index.html"
+                window.location = "index.jsp"
             }
             function setting() {
-                window.location = "Employer.html"
+                window.location = "Employer.jsp"
             }
 
         </script>

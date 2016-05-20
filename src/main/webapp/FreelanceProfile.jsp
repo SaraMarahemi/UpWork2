@@ -1,6 +1,5 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!doctype html>
 <html>
     <head>
@@ -41,7 +40,7 @@
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-default"><span class="glyphicon-search glyphicon"></span></button>
                                         </span>
-                                        <input type="text" class="form-control ptext" placeholder="Ø¬Ø³ØªØ¬Ù">
+                                        <input type="text" class="form-control ptext" placeholder="جستجو">
                                     </div>
                                 </div>
                             </form>
@@ -49,8 +48,8 @@
                         
                         <div class="col-xs-2 col-lg-2 col-lg-offset-1 navbar-right" style="margin-right:0px;">
                             <ol class="breadcrumb" style="background-color:white">
-                                <li><button class=" btn btn-success navbar-btn ptext" onclick="exit()">Ø®Ø±ÙØ¬</button></li>
-                                <li><button class=" btn btn-danger navbar-btn ptext" onclick="setting()" data-toggle="modal" data-target="#signUp">ØªÙØ¸ÛÙØ§Øª</button></li>
+                                <li><button class=" btn btn-success navbar-btn ptext" onclick="exit()">خروج</button></li>
+                                <li><button class=" btn btn-danger navbar-btn ptext" onclick="setting()" data-toggle="modal" data-target="#signUp">تنظیمات</button></li>
                             </ol>
                         </div>
 
@@ -76,19 +75,19 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active alltext">
-                                <a id="a_link" href="#overview" aria-controls="home" role="tab" data-toggle="tab">Ø¯ÙØ±ÙÙØ§</a>
+                                <a id="a_link" href="#overview" aria-controls="home" role="tab" data-toggle="tab">دورنما</a>
                             </li>
                             <li role="presentation" class="alltext">
-                                <a id="a_link" href="#skills" aria-controls="tab" role="tab" data-toggle="tab">ÙÙØ§Ø±Øª ÙØ§</a>
+                                <a id="a_link" href="#skills" aria-controls="tab" role="tab" data-toggle="tab">مهارت ها</a>
                             </li>
                             <li role="presentation" class="alltext">
-                                <a id="a_link" href="#workhistory" aria-controls="tab" role="tab" data-toggle="tab">Ø³ÙØ§Ø¨Ù Ú©Ø§Ø±Û</a>
+                                <a id="a_link" href="#workhistory" aria-controls="tab" role="tab" data-toggle="tab">سوابق کاری</a>
                             </li>
                             <li role="education" class="alltext">
-                                <a id="a_link" href="#education" aria-controls="tab" role="tab" data-toggle="tab">ØªØ­ØµÛÙØ§Øª</a>
+                                <a id="a_link" href="#education" aria-controls="tab" role="tab" data-toggle="tab">تحصیلات</a>
                             </li>
                             <li role="presentation" class="alltext">
-                                <a id="a_link" href="#contact" aria-controls="tab" role="tab" data-toggle="tab">Ø§Ø·ÙØ§Ø¹Ø§Øª ØªÙØ§Ø³</a>
+                                <a id="a_link" href="#contact" aria-controls="tab" role="tab" data-toggle="tab">اطلاعات تماس</a>
                             </li>
                         </ul>
                         <!-- Tab panes -->
@@ -102,11 +101,11 @@
                                             </img>
                                             <br/>
                                             <br/>
-                                            <p class="text-center">Ø¹ÙÛ</p>
-                                            <p class="text-center">Ø¹ÙÙÛ</p>
+                                            <p class="text-center">علی</p>
+                                            <p class="text-center">علوی</p>
                                             <br/>
-                                            <h4 class="text-center">ÙÙÙØ¯Ø³ Ú©Ø§ÙÙ¾ÛÙØªØ±</h4>
-                                            <button type="submit" class="btn btn-primary">Ø¯Ø¹ÙØª Ø¨Ù ÙÙÚ©Ø§Ø±Û</button>
+                                            <h4 class="text-center">مهندس کامپیوتر</h4>
+                                            <button type="submit" class="btn btn-primary">دعوت به همکاری</button>
                                             <br/>
                                             <!--<a href="https://twitter.com" id="ci1">
                                                 <div class="showhim">
@@ -142,7 +141,7 @@
                                             <br/>
                                   </div>
                                     </div>
-                                     <h3 class="biog_text_color">Ø¯ÙØ±ÙÙØ§</h3><br>
+                                     <h3 class="biog_text_color">دورنما</h3><br>
                                     <div class="col-sm-4 biog_text_color"> 
                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                     </div>
@@ -161,14 +160,14 @@
                                             </img>
                                             <br/>
                                             <br/>
-                                            <p class="text-center">Ø¹ÙÛ</p>
-                                            <p class="text-center">Ø¹ÙÙÛ</p>
+                                            <p class="text-center">علی</p>
+                                            <p class="text-center">علوی</p>
                                             <br/>
-                                            <h4 class="text-center">ÙÙÙØ¯Ø³ Ú©Ø§ÙÙ¾ÛÙØªØ±</h4>
-                                            <button type="submit" class="btn btn-primary">Ø¯Ø¹ÙØª Ø¨Ù ÙÙÚ©Ø§Ø±Û</button>
+                                            <h4 class="text-center">مهندس کامپیوتر</h4>
+                                            <button type="submit" class="btn btn-primary">دعوت به همکاری</button>
                                   </div>
                                     </div>
-                                     <h3 class="biog_text_color">ÙÙØ§Ø±Øª ÙØ§</h3><br>
+                                     <h3 class="biog_text_color">مهارت ها</h3><br>
                                     <div class="col-sm-4 biog_text_color"> 
                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                     </div>
@@ -187,14 +186,14 @@
                                             </img>
                                             <br/>
                                             <br/>
-                                            <p class="text-center">Ø¹ÙÛ</p>
-                                            <p class="text-center">Ø¹ÙÙÛ</p>
+                                            <p class="text-center">علی</p>
+                                            <p class="text-center">علوی</p>
                                             <br/>
-                                            <h4 class="text-center">ÙÙÙØ¯Ø³ Ú©Ø§ÙÙ¾ÛÙØªØ±</h4>
-                                            <button type="submit" class="btn btn-primary">Ø¯Ø¹ÙØª Ø¨Ù ÙÙÚ©Ø§Ø±Û</button>
+                                            <h4 class="text-center">مهندس کامپیوتر</h4>
+                                            <button type="submit" class="btn btn-primary">دعوت به همکاری</button>
                                   </div>
                                     </div>
-                                     <h3 class="biog_text_color">Ø³ÙØ§Ø¨Ù Ú©Ø§Ø±Û</h3><br>
+                                     <h3 class="biog_text_color">سوابق کاری</h3><br>
                                     <div class="col-sm-4 biog_text_color"> 
                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                     </div>
@@ -213,14 +212,14 @@
                                             </img>
                                             <br/>
                                             <br/>
-                                            <p class="text-center">Ø¹ÙÛ</p>
-                                            <p class="text-center">Ø¹ÙÙÛ</p>
+                                            <p class="text-center">علی</p>
+                                            <p class="text-center">علوی</p>
                                             <br/>
-                                            <h4 class="text-center">ÙÙÙØ¯Ø³ Ú©Ø§ÙÙ¾ÛÙØªØ±</h4>
-                                            <button type="submit" class="btn btn-primary">Ø¯Ø¹ÙØª Ø¨Ù ÙÙÚ©Ø§Ø±Û</button>
+                                            <h4 class="text-center">مهندس کامپیوتر</h4>
+                                            <button type="submit" class="btn btn-primary">دعوت به همکاری</button>
                                   </div>
                                     </div>
-                                     <h3 class="biog_text_color">ØªØ­ØµÛÙØ§Øª</h3><br>
+                                     <h3 class="biog_text_color">تحصیلات</h3><br>
                                     <div class="col-sm-4 biog_text_color"> 
                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                     </div>
@@ -240,14 +239,14 @@
                                             </img>
                                             <br/>
                                             <br/>
-                                            <p class="text-center">Ø¹ÙÛ</p>
-                                            <p class="text-center">Ø¹ÙÙÛ</p>
+                                            <p class="text-center">علی</p>
+                                            <p class="text-center">علوی</p>
                                             <br/>
-                                            <h4 class="text-center">ÙÙÙØ¯Ø³ Ú©Ø§ÙÙ¾ÛÙØªØ±</h4>
-                                            <button type="submit" class="btn btn-primary">Ø¯Ø¹ÙØª Ø¨Ù ÙÙÚ©Ø§Ø±Û</button>
+                                            <h4 class="text-center">مهندس کامپیوتر</h4>
+                                            <button type="submit" class="btn btn-primary">دعوت به همکاری</button>
                                   </div>
                                     </div>
-                                     <h3 class="biog_text_color" >Ø±Ø§Ù ÙØ§Û Ø§Ø±ØªØ¨Ø§Ø·Û</h3><br>
+                                     <h3 class="biog_text_color" >راه های ارتباطی</h3><br>
                                     <div class="col-sm-4 biog_text_color"> 
                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                     </div>
@@ -273,10 +272,10 @@
 
         <script >
             function exit() {
-                window.location = "index.html"
+                window.location = "index.jsp"
             }
               function setting() {
-                window.location = "Freelance.html"
+                window.location = "Freelance.jsp"
             }
         </script>
 

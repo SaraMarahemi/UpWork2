@@ -6,11 +6,10 @@
 package Entities;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,7 +29,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Sam
  */
 @Entity
-@Table(name = "joboffer", catalog = "neteng", schema = "")
+@Table(name = "joboffer")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Joboffer.findAll", query = "SELECT j FROM Joboffer j"),
@@ -76,10 +75,10 @@ public class Joboffer implements Serializable {
     @Basic(optional = false)
     @Column(name = "JobID")
     private Integer jobID;
-    @ManyToMany(mappedBy = "jobofferCollection", fetch = FetchType.LAZY)
-    private Collection<Employee> employeeCollection;
+    @ManyToMany(mappedBy = "jobofferList")
+    private List<Employee> employeeList;
     @JoinColumn(name = "EmployerID", referencedColumnName = "Username")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Employer employerID;
 
     public Joboffer() {
@@ -155,12 +154,12 @@ public class Joboffer implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Employee> getEmployeeCollection() {
-        return employeeCollection;
+    public List<Employee> getEmployeeList() {
+        return employeeList;
     }
 
-    public void setEmployeeCollection(Collection<Employee> employeeCollection) {
-        this.employeeCollection = employeeCollection;
+    public void setEmployeeList(List<Employee> employeeList) {
+        this.employeeList = employeeList;
     }
 
     public Employer getEmployerID() {

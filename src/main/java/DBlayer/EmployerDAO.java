@@ -7,6 +7,7 @@ package DBlayer;
 
 import Entities.Employee;
 import Entities.Employer;
+import Entities.Joboffer;
 
 /**
  *
@@ -21,5 +22,7 @@ public interface EmployerDAO {
     public String Update ( Employer Old , Employer New );
     public String Delete ( String EmployerID );
     public String Delete ( Employer e );
+    
+    public String AddJobOffer ( Employer e  , Joboffer jo) ;
     
 }

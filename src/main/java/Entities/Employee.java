@@ -6,11 +6,10 @@
 package Entities;
 
 import java.io.Serializable;
-import java.util.Collection;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
@@ -29,7 +28,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author Sam
  */
 @Entity
-@Table(name = "employee", catalog = "neteng", schema = "")
+@Table(name = "employee")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Employee.findAll", query = "SELECT e FROM Employee e"),
@@ -93,15 +92,17 @@ public class Employee implements Serializable {
     @JoinTable(name = "subscribe", joinColumns = {
         @JoinColumn(name = "EmployeeID", referencedColumnName = "Username")}, inverseJoinColumns = {
         @JoinColumn(name = "EmployerID", referencedColumnName = "Username")})
-    @ManyToMany(fetch = FetchType.LAZY)
-    private Collection<Employer> employerCollection;
+    @ManyToMany
+    private List<Employer> employerList;
     @JoinTable(name = "jobapplicant", joinColumns = {
         @JoinColumn(name = "EmployeeID", referencedColumnName = "Username")}, inverseJoinColumns = {
         @JoinColumn(name = "JobID", referencedColumnName = "JobID")})
-    @ManyToMany(fetch = FetchType.LAZY)
-    private Collection<Joboffer> jobofferCollection;
-    @OneToMany(mappedBy = "employeeID", fetch = FetchType.LAZY)
-    private Collection<ResumesCv> resumesCvCollection;
+    @ManyToMany
+    private List<Joboffer> jobofferList;
+    @ManyToMany(mappedBy = "employeeList")
+    private List<Team> teamList;
+    @OneToMany(mappedBy = "employeeID")
+    private List<ResumesCv> resumesCvList;
 
     public Employee() {
     }
@@ -110,6 +111,14 @@ public class Employee implements Serializable {
         this.username = username;
     }
 
+        
+    public Employee(String username, String name, String lastname, String password) {
+        this.username = username;
+        this.name = name;
+        this.lastname = lastname;
+        this.password = password;
+    }
+    
     public Employee(String username, String name, String lastname, String email, String password) {
         this.username = username;
         this.name = name;
@@ -215,30 +224,39 @@ public class Employee implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Employer> getEmployerCollection() {
-        return employerCollection;
+    public List<Employer> getEmployerList() {
+        return employerList;
     }
 
-    public void setEmployerCollection(Collection<Employer> employerCollection) {
-        this.employerCollection = employerCollection;
-    }
-
-    @XmlTransient
-    public Collection<Joboffer> getJobofferCollection() {
-        return jobofferCollection;
-    }
-
-    public void setJobofferCollection(Collection<Joboffer> jobofferCollection) {
-        this.jobofferCollection = jobofferCollection;
+    public void setEmployerList(List<Employer> employerList) {
+        this.employerList = employerList;
     }
 
     @XmlTransient
-    public Collection<ResumesCv> getResumesCvCollection() {
-        return resumesCvCollection;
+    public List<Joboffer> getJobofferList() {
+        return jobofferList;
     }
 
-    public void setResumesCvCollection(Collection<ResumesCv> resumesCvCollection) {
-        this.resumesCvCollection = resumesCvCollection;
+    public void setJobofferList(List<Joboffer> jobofferList) {
+        this.jobofferList = jobofferList;
+    }
+
+    @XmlTransient
+    public List<Team> getTeamList() {
+        return teamList;
+    }
+
+    public void setTeamList(List<Team> teamList) {
+        this.teamList = teamList;
+    }
+
+    @XmlTransient
+    public List<ResumesCv> getResumesCvList() {
+        return resumesCvList;
+    }
+
+    public void setResumesCvList(List<ResumesCv> resumesCvList) {
+        this.resumesCvList = resumesCvList;
     }
 
     @Override

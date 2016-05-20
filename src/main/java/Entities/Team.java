@@ -6,23 +6,28 @@
 package Entities;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
  * @author Sam
  */
 @Entity
-@Table(name = "team", catalog = "neteng", schema = "")
+@Table(name = "team")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Team.findAll", query = "SELECT t FROM Team t"),
@@ -68,6 +73,11 @@ public class Team implements Serializable {
     @Size(max = 30)
     @Column(name = "Resume")
     private String resume;
+    @JoinTable(name = "teammembers", joinColumns = {
+        @JoinColumn(name = "TeamID", referencedColumnName = "Username")}, inverseJoinColumns = {
+        @JoinColumn(name = "EmployeeID", referencedColumnName = "Username")})
+    @ManyToMany
+    private List<Employee> employeeList;
 
     public Team() {
     }
@@ -138,6 +148,15 @@ public class Team implements Serializable {
 
     public void setResume(String resume) {
         this.resume = resume;
+    }
+
+    @XmlTransient
+    public List<Employee> getEmployeeList() {
+        return employeeList;
+    }
+
+    public void setEmployeeList(List<Employee> employeeList) {
+        this.employeeList = employeeList;
     }
 
     @Override

@@ -1,5 +1,4 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!doctype html>
 <html>
     <head>
@@ -10,7 +9,7 @@
 
         <title>Index</title>
 
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
         <link rel="stylesheet" href="css/SignUp_style.css">
         <link rel="stylesheet" href="css/mainclass.css">
         <link rel="stylesheet" href="css/style_login.css">
@@ -40,7 +39,7 @@
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-default"><span class="glyphicon-search glyphicon"></span></button>
                                         </span>
-                                        <input type="text" class="form-control ptext" placeholder="Ø¬Ø³ØªØ¬Ù">
+                                        <input type="text" class="form-control ptext" placeholder="جستجو">
                                     </div>
                                 </div>
                             </form>
@@ -51,7 +50,7 @@
                                 <li><button class=" btn btn-success navbar-btn ptext" onclick="exit()">خروج</button></li>
 
                             </ol>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,13 +68,13 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active alltext">
-                                <a id="a_link" href="#home" aria-controls="home" role="tab" data-toggle="tab">Ø§ÙØ²ÙØ¯Ù Ø§Ø¹Ø¶Ø§</a>
+                                <a id="a_link" href="#home" aria-controls="home" role="tab" data-toggle="tab">افزودن اعضا</a>
                             </li>
                             <li role="presentation" class="alltext">
-                                <a  id="a_link" href="#tab" aria-controls="tab" role="tab" data-toggle="tab">Ø§Ø¹Ø¶Ø§</a>
+                                <a  id="a_link" href="#tab" aria-controls="tab" role="tab" data-toggle="tab">اعضا</a>
                             </li>
                             <li role="presentation" class="alltext">
-                                <a  id="a_link" href="#search" aria-controls="tab" role="tab" data-toggle="tab">Ø¯Ø±Ø®ÙØ§Ø³Øª Ú©Ø§Ø±</a>
+                                <a  id="a_link" href="#search" aria-controls="tab" role="tab" data-toggle="tab">درخواست کار</a>
                             </li>
                             
                             
@@ -91,9 +90,9 @@
                                         
                                             <div class="form-group">
                                                 
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙØ§Ù Ú©Ø§Ø±Ø¨Ø±Û Ø¹Ø¶Ù Ø§ÙÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙØ§Ù Ú©Ø§Ø±Ø¨Ø±Û Ø¹Ø¶Ù Ø¯ÙÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙØ§Ù Ú©Ø§Ø±Ø¨Ø±Û Ø¹Ø¶Ù Ø³ÙÙ">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="نام کاربری عضو اول">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="نام کاربری عضو دوم">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="نام کاربری عضو سوم">
                                                 
                                             </div>
 
@@ -101,7 +100,7 @@
                                         
                                             
                                         
-                                            <button type="submit" class="btn btn-primary">Ø«Ø¨Øª ØªØºÛÛØ±</button>
+                                            <button type="submit" class="btn btn-primary">ثبت تغییر</button>
                                         </form>
 
                                         
@@ -120,16 +119,16 @@
                                         
                                             <div class="form-group">
                                                 
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙØ§Ù Ú©Ø§Ø±Ø¨Ø±Û Ø¹Ø¶Ù Ø§ÙÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙØ§Ù Ú©Ø§Ø±Ø¨Ø±Û Ø¹Ø¶Ù Ø¯ÙÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙØ§Ù Ú©Ø§Ø±Ø¨Ø±Û Ø¹Ø¶Ù Ø³ÙÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙØ§Ù Ú©Ø§Ø±Ø¨Ø±Û Ø¹Ø¶Ù ÚÙØ§Ø±Ù">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="نام کاربری عضو اول">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="نام کاربری عضو دوم">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="نام کاربری عضو سوم">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="نام کاربری عضو چهارم">
                                                 
                                             </div>
                                         
                                             
                                         
-                                            <button type="submit" class="btn btn-primary">Ø§Ø±Ø³Ø§Ù</button>
+                                            <button type="submit" class="btn btn-primary">ارسال</button>
                                         </form>
 
                                     </div>
@@ -148,17 +147,17 @@
                                         
                                             <div class="form-group">
                                                 
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ØªØ®ØµØµ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙÙØ¹ Ø´ØºÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø³ÙØ¨ÙÙ Û Ú©Ø§Ø± ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø³ÙØ¯ Ø¯Ø±ÛØ§ÙØªÛ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="ÙØ§Ù Ú©Ø§Ø±Ø¨Ø±Û Ú©Ø§Ø±ÙØ±ÙØ§">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø²ÙØ§Ù Ø§ÙØ¬Ø§Ù Ú©Ø§Ø±">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="تخصص">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="نوع شغل">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="سلبقه ی کار ">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="سود دریافتی">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="نام کاربری کارفرما">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="زمان انجام کار">
                                             </div>
                                         
                                             
                                         
-                                            <button type="submit" class="btn btn-primary">Ø§Ø±Ø³Ø§Ù Ø¯Ø±Ø®ÙØ§Ø³Øª</button>
+                                            <button type="submit" class="btn btn-primary">ارسال درخواست</button>
                                         </form>
 
                                     </div>
@@ -175,14 +174,14 @@
                                         
                                             <div class="form-group">
                                                 
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø¹ÙÙØ§Ù Ù¾Ø±ÙÚÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø²ÙØ§Ù Ù¾Ø±ÙÚÙ">
-                                                <input type="text" class="form-control inputstyle3" id="" placeholder="Ø³ÙØ¯ Ù¾Ø±ÙÚÙ">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="عنوان پروژه">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="زمان پروژه">
+                                                <input type="text" class="form-control inputstyle3" id="" placeholder="سود پروژه">
                                             </div>
                                         
                                             
                                         
-                                            <button type="submit" class="btn btn-primary">Ø§ÛØ¬Ø§Ø¯ Ø¯Ø±Ø®ÙØ§Ø³Øª</button>
+                                            <button type="submit" class="btn btn-primary">ایجاد درخواست</button>
                                         </form>
                                         
                                     </div>
@@ -205,7 +204,7 @@
 
         <script >
             function exit() {
-                window.location = "index.html"
+                window.location = "index.jsp"
             }
             
 

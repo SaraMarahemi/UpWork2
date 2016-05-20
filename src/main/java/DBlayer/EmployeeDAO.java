@@ -6,6 +6,7 @@
 package DBlayer;
 
 import Entities.Employee;
+import Entities.ResumesCv;
 
 /**
  *
@@ -16,9 +17,11 @@ public interface EmployeeDAO {
     public Employee Find ( String EmployeeID ) ;
     
     public String Insert( Employee e ) ;
-    public String Update ( Employee New );
+    public String Update ( String EmployeeID , Employee New  );
     public String Update ( Employee Old , Employee New );
     public String Delete ( String EmployeeID );
     public String Delete ( Employee e );
+    
+    public String AddResume ( Employee e , ResumesCv RC ) ;
     
 }
